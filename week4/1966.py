@@ -1,4 +1,4 @@
-# 1966, 1966, Silver 3
+# 1966, Silver 3
 # https://www.acmicpc.net/problem/1966
 
 import sys

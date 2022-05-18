@@ -1,8 +1,9 @@
 #괄호 실버4
 import sys
 
-#N=int(sys.stdin.readline())
-N=6
+N=int(sys.stdin.readline())
+#N=6
+
 def is_parenthesis_string(arr):
     llist=[]
     
@@ -21,8 +22,8 @@ def is_parenthesis_string(arr):
         return False
 
 for i in range(N):
-    #arr=sys.stdin.readline()
-    arr=input()
+    arr=sys.stdin.readline()
+    #arr=input()
     if(is_parenthesis_string(arr)):
         print("YES")
     else:
