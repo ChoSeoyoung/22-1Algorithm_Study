@@ -19,7 +19,6 @@ def N_M(i,S):
     if(len(result)!=N):
         if(len(S)==N2):
             result.append(S)
-            N_M(i+1, [])
         else:
             for j in range(i, len(arr), 1):
                 if arr[j] not in S:
@@ -29,6 +28,7 @@ def N_M(i,S):
 
 N_M(0,[])
 for a in result:
-    for aa in a[:-1:]:
-        print(aa,end=" ")
-    print(a[-1])
+    if(len(a)!=0):
+        for aa in a[:-1:]:
+            print(aa,end=" ")
+        print(a[-1])

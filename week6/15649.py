@@ -18,7 +18,7 @@ def N_M(i, S):
             result.append(S)
         else: 
             for j in range(i, len(arr), 1):
-                if arr[j] not in S:
+                if arr[j] not in S: #promising하게 만들어줌
                     N_M(0, S+[arr[j]])
     else:
         return result
