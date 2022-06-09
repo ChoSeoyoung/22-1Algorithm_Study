@@ -4,13 +4,18 @@
 
 import sys
 
-N, W = map(int, sys.stdin.readline().split())
-llist=[list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+n, W = map(int, sys.stdin.readline().split())
+llist=[list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 llist=sorted(llist, key=lambda x: round(x[1]/x[0],2), reverse=True)
-w,v=[0 for _ in range(N)],[0 for _ in range(N)]
-for i in range(N):
-    w[i],v[i]=llist[i][0],llist[i][1]
+w,v=[],[]
 
+N=0
+for i in range(n):
+    if llist[i][0]<=W:
+        w.append(llist[i][0])
+        v.append(llist[i][1])
+        N+=1
+        
 #BFS 방식의 탐색, 너비 우선 탐색
 maxprofit=0
 
